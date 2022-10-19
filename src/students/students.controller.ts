@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post, Query, Res, Delete, Param } from '@nestjs/common';
 import { Response } from 'express';
-import { Student } from 'src/student.entity';
+import { Student } from 'src/students/entity/student.entity';
 import { ISearchStudent } from './students.interface';
 import { StudentsService } from './students.service';
 

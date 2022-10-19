@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { StudentsModule } from './students/students.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Student } from './student.entity';
+import { Student } from './students/entity/student.entity';
+import { Users } from './students/entity/user.entity';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { Student } from './student.entity';
       username: 'root',
       password: 'root',
       database: 'grupoa',
-      entities: [Student],
+      entities: [Student, Users],
       synchronize: true,
     })],
   controllers: [],
