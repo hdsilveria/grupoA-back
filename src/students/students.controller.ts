@@ -1,9 +1,10 @@
-import { Body, Controller, Get, Post, Query, Res, Delete, Param } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query, Res, Delete, Param, UseGuards } from '@nestjs/common';
 import { Response } from 'express';
 import { Student } from 'src/students/entity/student.entity';
+import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { ISearchStudent } from './students.interface';
 import { StudentsService } from './students.service';
-
+@UseGuards(JwtAuthGuard)
 @Controller('students')
 export class StudentsController {
     constructor(private studentService: StudentsService){}

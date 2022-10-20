@@ -16,7 +16,7 @@ export class StudentsService {
     }
 
     public create(user: Student):Promise<any> {
-        return this.student.insert(user).then(() => 'Usuário criado com sucesso!')
+        return this.student.insert(user).then(() => 'Aluno criado com sucesso!')
     }
     
     public searchStudent(studentName: string): Promise<any>{
@@ -26,10 +26,10 @@ export class StudentsService {
     }
 
     public async remove(id: number): Promise<string> {
-        return await this.student.delete(id).then(() => 'Usuário deletado com sucesso!');
+        return await this.student.delete(id).then(() => 'Aluno deletado com sucesso!');
     }
     
     public async update(id: number, body: Student): Promise<string>{
-        return this.student.update(id, body).then(() => 'Usuário Alterado com sucesso!')
+        return this.student.update(id, body).then(() => 'Aluno Alterado com sucesso!')
     }
 }
