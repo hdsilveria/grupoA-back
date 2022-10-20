@@ -33,6 +33,8 @@ $ npm install
 ```
 $ docker-compose up 
 
+% run docker-compose up to create the database and then create user at http://localhost:3000/auth/newUser with the following properties: username(string), password(string) and type(number);
+
 ## Running the app
 
 ```bash
